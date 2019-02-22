@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import WeatherLocation from './components/WeatherLocation';
+import {purple, pink} from '@material-ui/core/colors';
+import { light } from '@material-ui/core/styles/createPalette';
+
+//funcion q me va a permitir crear themes
+const theme = createMuiTheme({
+  palette: {
+    primary: purple,
+    secondary: pink,
+  },
+  typography:{
+    useNextVariants:true
+  }
+});
+
 
 class App extends Component {
   render() {
